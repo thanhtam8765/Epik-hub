@@ -1,0 +1,264 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui3 = Instance.new("ScreenGui")
+local Hub = Instance.new("ScrollingFrame")
+local AllBuild = Instance.new("TextButton")
+local Build = Instance.new("TextButton")
+local Q2N = Instance.new("TextButton")
+local Nuke = Instance.new("TextButton")
+local Skin = Instance.new("TextButton")
+local Rb = Instance.new("TextButton")
+local Nuke_2 = Instance.new("TextButton")
+local Kill = Instance.new("TextButton")
+local SkinHub = Instance.new("Frame")
+local Normal = Instance.new("TextButton")
+local Black = Instance.new("TextButton")
+local Desert = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local Key = true
+--Properties:
+
+ScreenGui3.Name = "ScreenGui3"
+ScreenGui3.Parent = game.CoreGui
+
+Hub.Name = "Hub"
+Hub.Parent = ScreenGui3
+Hub.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
+Hub.Position = UDim2.new(0.398989916, 0, 0.328031808, 0)
+Hub.Size = UDim2.new(0, 100, 0, 217)
+Hub.CanvasPosition = Vector2.new(0, 339)
+Hub.Active = true
+Hub.Draggable = true
+
+AllBuild.Name = "AllBuild"
+AllBuild.Parent = Hub
+AllBuild.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+AllBuild.BorderColor3 = Color3.fromRGB(27, 42, 53)
+AllBuild.Size = UDim2.new(0, 87, 0, 50)
+AllBuild.Font = Enum.Font.SourceSans
+AllBuild.Text = "Give Everyone All Build"
+AllBuild.TextColor3 = Color3.fromRGB(0, 0, 0)
+AllBuild.TextScaled = true
+AllBuild.TextSize = 14.000
+AllBuild.TextWrapped = true
+AllBuild.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/wMDh7RcS"))()
+end)
+
+Build.Name = "Build"
+Build.Parent = Hub
+Build.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+Build.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Build.Position = UDim2.new(0, 0, 0.0497017875, 0)
+Build.Size = UDim2.new(0, 87, 0, 50)
+Build.Font = Enum.Font.SourceSans
+Build.Text = "All Build"
+Build.TextColor3 = Color3.fromRGB(0, 0, 0)
+Build.TextScaled = true
+Build.TextSize = 14.000
+Build.TextWrapped = true
+Build.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/rVrEFdtC"))()
+end)
+
+Q2N.Name = "Q2N"
+Q2N.Parent = Hub
+Q2N.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+Q2N.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Q2N.Position = UDim2.new(0, 0, 0.0994035751, 0)
+Q2N.Size = UDim2.new(0, 87, 0, 50)
+Q2N.Font = Enum.Font.SourceSans
+Q2N.Text = "Q to Nuke"
+Q2N.TextColor3 = Color3.fromRGB(0, 0, 0)
+Q2N.TextScaled = true
+Q2N.TextSize = 14.000
+Q2N.TextWrapped = true
+Q2N.MouseButton1Down:connect(function()
+	local mouse = game:service'Players'.LocalPlayer:GetMouse()
+	mouse.KeyDown:Connect(function(k)
+		if k == "q" then
+			game:GetService("ReplicatedStorage").RE.FireMissile:FireServer("Nuke",Vector3.new(mouse.Hit.p.X,48.6649132,mouse.Hit.p.Z))
+		end
+	end)
+end)
+
+Nuke.Name = "Nuke"
+Nuke.Parent = Hub
+Nuke.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+Nuke.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Nuke.Position = UDim2.new(0, 0, 0.14910537, 0)
+Nuke.Size = UDim2.new(0, 87, 0, 50)
+Nuke.Font = Enum.Font.SourceSans
+Nuke.Text = "Send Nuke"
+Nuke.TextColor3 = Color3.fromRGB(0, 0, 0)
+Nuke.TextScaled = true
+Nuke.TextSize = 14.000
+Nuke.TextWrapped = true
+Nuke.MouseButton1Down:connect(function()
+	for i=1,1337 do
+		local Missile = "Nuke"
+		local Position = Vector3.new(0, 0, 0)
+		game:GetService("ReplicatedStorage").RE.FireMissile:FireServer(Missile, Position)
+	end
+end)
+
+Skin.Name = "Skin"
+Skin.Parent = Hub
+Skin.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+Skin.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Skin.Position = UDim2.new(0, 0, 0.29821074, 0)
+Skin.Size = UDim2.new(0, 87, 0, 50)
+Skin.Font = Enum.Font.SourceSans
+Skin.Text = "Skin Hub"
+Skin.TextColor3 = Color3.fromRGB(0, 0, 0)
+Skin.TextScaled = true
+Skin.TextSize = 14.000
+Skin.TextWrapped = true
+Skin.MouseButton1Down:Connect(function()
+	SkinHub.Visible = true
+end)
+
+Rb.Name = "Rb"
+Rb.Parent = Hub
+Rb.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+Rb.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Rb.Position = UDim2.new(0, 0, 0.19880715, 0)
+Rb.Size = UDim2.new(0, 87, 0, 50)
+Rb.Font = Enum.Font.SourceSans
+Rb.Text = "Rebirth Farm"
+Rb.TextColor3 = Color3.fromRGB(0, 0, 0)
+Rb.TextScaled = true
+Rb.TextSize = 14.000
+Rb.TextWrapped = true
+Rb.MouseButton1Down:connect(function()
+	while wait(.3) do
+		loadstring(game:HttpGet("https://pastebin.com/raw/rVrEFdtC"))()
+		wait(.15)
+		game:GetService("ReplicatedStorage").RE.rebirth:FireServer()
+	end
+end)
+
+Nuke_2.Name = "Nuke"
+Nuke_2.Parent = Hub
+Nuke_2.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+Nuke_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Nuke_2.Position = UDim2.new(0, 0, 0.24850893, 0)
+Nuke_2.Size = UDim2.new(0, 87, 0, 50)
+Nuke_2.Font = Enum.Font.SourceSans
+Nuke_2.Text = "Crash People"
+Nuke_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Nuke_2.TextScaled = true
+Nuke_2.TextSize = 14.000
+Nuke_2.TextWrapped = true
+Nuke_2.MouseButton1Down:connect(function()
+	while wait() do
+		for i,v in pairs(game.Players:GetChildren()) do
+			targetPos = v.Character.HumanoidRootPart.Position
+			game.ReplicatedStorage.RE.FireMissile:FireServer("Nuke",targetPos)
+		end
+	end
+end)
+
+Kill.Name = "Kill"
+Kill.Parent = Hub
+Kill.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+Kill.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Kill.Position = UDim2.new(0, 0, 0.346918523, 0)
+Kill.Size = UDim2.new(0, 87, 0, 50)
+Kill.Font = Enum.Font.SourceSans
+Kill.Text = "Kill Unit"
+Kill.TextColor3 = Color3.fromRGB(0, 0, 0)
+Kill.TextScaled = true
+Kill.TextSize = 14.000
+Kill.TextWrapped = true
+Kill.MouseButton1Down:connect(function()
+	for i,v in pairs(game.Workspace.Game.Units:GetChildren()) do
+		if v.Name == game.Players.LocalPlayer.Name then
+		else
+			for i,v2 in pairs(v:GetChildren()) do
+				local Missile = "Cruise Missile"
+				local Position = v2.Torso.Position
+				game:GetService("ReplicatedStorage").RE.FireMissile:FireServer(Missile, Position)
+			end
+		end
+	end
+end)
+
+SkinHub.Name = "Skin Hub"
+SkinHub.Parent = ScreenGui3
+SkinHub.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
+SkinHub.Position = UDim2.new(0.398989916, 0, 0.328031808, 0)
+SkinHub.Size = UDim2.new(0, 100, 0, 229)
+SkinHub.Visible = false
+
+Normal.Name = "Normal"
+Normal.Parent = SkinHub
+Normal.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+Normal.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Normal.Position = UDim2.new(0, 0, 0.282402366, 0)
+Normal.Size = UDim2.new(0, 100, 0, 50)
+Normal.Font = Enum.Font.SourceSans
+Normal.Text = "Normal"
+Normal.TextColor3 = Color3.fromRGB(0, 0, 0)
+Normal.TextScaled = true
+Normal.TextSize = 14.000
+Normal.TextWrapped = true
+Normal.MouseButton1Down:connect(function()
+	SkinHub.Visible = false
+	local Skin_Name = "Default"
+	game:GetService("ReplicatedStorage").RE.changeSkins:FireServer(Skin_Name)
+end)
+
+Black.Name = "Black"
+Black.Parent = SkinHub
+Black.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+Black.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Black.Position = UDim2.new(0, 0, 0.496798724, 0)
+Black.Size = UDim2.new(0, 100, 0, 50)
+Black.Font = Enum.Font.SourceSans
+Black.Text = "Black Op"
+Black.TextColor3 = Color3.fromRGB(0, 0, 0)
+Black.TextScaled = true
+Black.TextSize = 14.000
+Black.TextWrapped = true
+Black.MouseButton1Down:connect(function()
+	SkinHub.Visible = false
+	local Skin_Name = "Black"
+	game:GetService("ReplicatedStorage").RE.changeSkins:FireServer(Skin_Name)
+end)
+
+Desert.Name = "Desert"
+Desert.Parent = SkinHub
+Desert.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+Desert.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Desert.Position = UDim2.new(0, 0, 0.713730752, 0)
+Desert.Size = UDim2.new(0, 100, 0, 50)
+Desert.Font = Enum.Font.SourceSans
+Desert.Text = "Desert"
+Desert.TextColor3 = Color3.fromRGB(0, 0, 0)
+Desert.TextScaled = true
+Desert.TextSize = 14.000
+Desert.TextWrapped = true
+Desert.MouseButton1Down:connect(function()
+	SkinHub.Visible = false
+	local Skin_Name = "Desert"
+	game:GetService("ReplicatedStorage").RE.changeSkins:FireServer(Skin_Name)
+end)
+
+TextLabel.Parent = SkinHub
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(-0.00641418435, 0, -0.00821276009, 0)
+TextLabel.Size = UDim2.new(0, 100, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Choose Skin"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+
+
